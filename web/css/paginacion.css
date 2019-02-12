@@ -1,0 +1,22 @@
+/* CSS */
+.btn {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 3px;
+    background: #7F83AD;
+}
+
+.btn:hover {
+    background: #474C80;
+}
+
+.active {
+    background: #333;
+    border-radius: 35px;
+}
+
+/* CSS */

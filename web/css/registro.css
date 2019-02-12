@@ -1,0 +1,17 @@
+#content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#formulario{
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: 20px;
+}
+
+input,label{
+    margin: auto auto;
+    margin-top: 5px;
+    text-align: center;
+}

@@ -1,0 +1,105 @@
+/** TABLAS Y FORMULARIOS PRODUCTOS **/
+  #view_product {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 20px auto 100px auto;
+  }
+
+  #formulario_productos{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+  }
+  
+  #formulario_productos > input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 200px;
+  }
+
+  #formulario_productos > label{
+    background-color: #AAA;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: Comic Sans MS;
+  }
+
+  #descript{
+    align-self: center;
+    width: 99%;
+  }
+
+  #caja_busqueda{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  img{
+    width: 170px;
+  }
+  
+/** TABLAS Y FORMULARIOS USUARIO **/
+  #datosUsuario{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    margin: 15px auto 175px auto;
+  }
+
+  #formulario{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    text-align: center; 
+  }  
+#formulario label{
+  margin-top: 15px;
+}
+
+  #view_perfil td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  #botones_perfil{
+    display: flex;
+    justify-content: center;
+  }
+
+#errorLogin {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#mensajeError{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #777;
+  border: 1px solid black;
+  animation-name: prueba;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes prueba{
+  from {
+    margin-left: -70%; 
+    opacity: 0.0;
+  }
+  to{
+    opacity: 1.0;
+  }
+}

@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("../img/fondo-GRIS.jpg");
+}
+
+#content{
+    display: grid;
+    grid-template-areas: 
+        "nav nav"
+        "header header"
+        "section section"
+        "footer footer";
+}
+
+header{
+  grid-area: header;
+  background-image: url("../img/Gaming.jpg");
+  height: 180px;
+  
+}
+
+nav{
+  grid-area: nav;
+  border: 1px solid black;
+  text-align: center;
+}
+
+section{
+  grid-area: section;
+}
+
+footer{
+  grid-area: footer;
+  width: 100%;
+  //position: fixed;
+  bottom: 0px;
+  text-align: center;
+}
