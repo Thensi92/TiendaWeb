@@ -6,6 +6,10 @@
     margin: 20px auto 100px auto;
   }
 
+.card{
+  margin-bottom: 20px;
+}
+
   #formulario_productos{
     display: flex;
     flex-flow: column wrap;
@@ -55,11 +59,16 @@
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    justify-content: center;
-    text-align: center; 
+    text-align: center;
+    margin: 15px auto 175px auto;
   }  
+
 #formulario label{
   margin-top: 15px;
+}
+
+#formulario > #pass{
+  margin-bottom: 20px;
 }
 
   #view_perfil td{

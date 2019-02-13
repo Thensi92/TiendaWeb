@@ -8,6 +8,8 @@
             <label for="pass">Contraseña:</label>
             <input type="password" name="contrasena" id="pass" placeholder="****">
             
+            <br>
+            
             <input type="submit" name="procesar_login" value="Loguear">
         </fieldset>
     </form>

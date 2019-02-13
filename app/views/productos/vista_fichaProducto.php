@@ -1,4 +1,4 @@
-<section>
+<section id="view_product">
   <div class="card" style="width: 18rem;">
 
     <img src="<?=$datosDelProducto['rutaImagen']?>" class="card-img-top" alt="...">
