@@ -18,7 +18,7 @@
                 <label for="descript">Descripcion:</label>
                 <textarea rows="3" cols="20" name="descripcion" id="descript"></textarea>
 
-                <input type="submit" name="procesar_insertarProductos" value="Insertar Producto">
+                <input type="submit" name="procesar_insertarProducto" value="Insertar Producto">
             </fieldset>
         </form>
     </div>

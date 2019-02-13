@@ -73,7 +73,6 @@ Class Usuario extends Modelo {
     }
 
     public function actualizarDatos($nombre,$fecha,$apodo,$pass) {
-        $filasAfectadas;
         $correoSesion = $_SESSION['datosUser'][2];
 
         $sql = "UPDATE usuarios SET nombre = ?, fecha = ?, apodo = ?, contrasena = ? WHERE email = ?";

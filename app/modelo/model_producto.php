@@ -53,8 +53,15 @@ Class Producto extends Modelo {
         return $datosProducto;
     }
 
-    public function actualizarProducto(){
-        
+    public function actualizarProducto($id,$titulo,$imagen,$precio,$cantidad,$descripcion){
+        $rutaImagen = "web/img_products/$imagen";
+        $sql = "UPDATE productos SET titulo = ?, imagen = ?, precio = ?, cantidad = ?, descripcion = ? WHERE id = ?";
+
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bind_param('ssssss',$titulo,$rutaImagen,$precio,$cantidad,$descripcion,$id);
+
+        $stmt->execute();
+        $stmt->close();
     }
 
     public function eliminarProducto(){

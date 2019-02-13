@@ -12,7 +12,7 @@
         //PRODUCTOS
         'verProducto' => "app/controllers/productos/verFichaProducto.php",
         'agregarProducto' => "app/views/productos/vista_insertarProductos.php",
-        'editarProducto' => "app/views/productos/vista_editarProducto.php",
+        'editarProducto' => "app/controllers/productos/editarProducto.php",
         'eliminarProducto' => "app/views/productos/vista_eliminarProducto.php"
     ];
 
@@ -22,9 +22,9 @@
         'procesar_registro' => "app/controllers/usuarios/crearUsuario.php",
         'procesar_edicion' => "app/controllers/usuarios/editarDatosController.php",
         //PRODUCTOS
-        'procesar_insertarProductos' => "app/controllers/productos/insertarProducto.php",
-        'procesar_editarProductos' => "app/controllers/productos/editarProducto.php",
-        'procesar_eliminarProductos' => "app/controllers/productos/eliminarProducto.php"
+        'procesar_insertarProducto' => "app/controllers/productos/insertarProducto.php",
+        'procesar_editarProducto' => "app/controllers/productos/editarProducto.php",
+        'procesar_eliminarProducto' => "app/controllers/productos/eliminarProducto.php"
     ];
 
     require_once("web/header/cabecera.php");

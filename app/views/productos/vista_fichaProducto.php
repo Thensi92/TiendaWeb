@@ -19,8 +19,8 @@
           echo '</ul>';
        
           echo '<div class="card-body">';
-            echo '<a href="#" class="card-link">Editar</a>';
-            echo '<a href="#" class="card-link">Eliminar</a>';
+            echo '<a href="index.php?ctl=editarProducto&&id='.$datosDelProducto["id"].'" class="card-link">Editar</a>';
+            echo '<a href="index.php?ctl=eliminarProducto&&id='.$datosDelProducto["id"].'" class="card-link">Eliminar</a>';
           echo '</div>';
       }else{
         echo '</ul>';
