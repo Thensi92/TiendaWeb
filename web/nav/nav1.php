@@ -20,7 +20,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.php?ctl=verCesta">Mis Productos</a>
+        <a class="nav-link" href="index.php?ctl=verCesta">Cesta</a>
       </li>
 
     </ul>

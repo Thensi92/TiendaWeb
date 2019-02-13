@@ -9,7 +9,7 @@
     </div>
 
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Precio: <?=$datosDelProducto['precioProducto']?></li>
+      <li class="list-group-item">Precio: <?=$datosDelProducto['precioProducto']?>€</li>
 
       <?php
       if(!empty($_SESSION['datosUser'])){
@@ -26,7 +26,7 @@
         echo '</ul>';
         
         echo '<div class="card-body">';
-          echo '<a href="#" class="card-link">Comprar</a>';
+          echo '<a href="#" class="card-link">Añadir a la cesta</a>';
         echo '</div>';
       }
     }else{

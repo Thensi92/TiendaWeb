@@ -16,7 +16,7 @@ $search = null;
         $pagination->param = "&search=$search";
 
         $pagination->rowCount("SELECT * FROM productos WHERE titulo LIKE '%$search%' ");
-        $pagination->config(5, 3);
+        $pagination->config(5, 2);
 
         $sql = "SELECT * FROM productos WHERE titulo LIKE '%$search%' ORDER BY id ASC LIMIT $pagination->start_row, $pagination->max_rows";
         $query = $connection->prepare($sql);
@@ -30,7 +30,7 @@ $search = null;
 
     }else {
         $pagination->rowCount("SELECT * FROM productos");
-        $pagination->config(5, 3);
+        $pagination->config(5, 2);
 
         $sql = "SELECT * FROM productos ORDER BY id ASC LIMIT $pagination->start_row, $pagination->max_rows";
 
@@ -62,7 +62,7 @@ $search = null;
         
         echo '<div class="card-body">';
         echo '<h5 class="card-title">'.$row["titulo"].'</h5>';
-        echo '<a href="index.php?ctl=verProducto&&id='.$row["id"].'" class="btn btn-primary">Go somewhere</a>';
+        echo '<a href="index.php?ctl=verProducto&&id='.$row["id"].'" class="btn btn-primary">Ver</a>';
         echo '</div>';
         
         echo '</div>';

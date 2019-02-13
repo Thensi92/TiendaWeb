@@ -1,28 +1,33 @@
+<section id="datosUsuario">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apodo</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Correo</th>
+            </tr>
+        </thead>
 
-    <section>
-        <div id="datosUsuario">
-        <table id="view_perfil">
-        <tr>
-            <td>Nombre del Usuario:</td><td><?=$_SESSION['datosUser'][0]?></td>
-        </tr>
-        <tr>
-            <td>Fecha de Nacimiento:</td><td><?=$_SESSION['datosUser'][1]?></td>
-        </tr>
-        <tr>
-            <td>Correo electronico:</td><td><?=$_SESSION['datosUser'][2]?></td>
-        </tr>
-        <tr>
-            <td>Apodo:</td><td><?=$_SESSION['datosUser'][3]?></td>
-        </tr>
+        <tbody>
+            <tr>
+                <th scope="row"><?=$_SESSION['datosUser'][0]?></th>
+                <td><?=$_SESSION['datosUser'][3]?></td>
+                <td><?=$_SESSION['datosUser'][1]?></td>
+                <td><?=$_SESSION['datosUser'][2]?></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" id="botonPerfil">
+                    <form action="index.php?ctl=modificarDatos" method="POST">
+                        <input type="submit" value="Editar">
+                    </form>
+                </td>
+            </tr>
+        </tbody>
     </table>
-        <div id="botones_perfil">
-            <form action="index.php" method="POST">
-                <input type="submit"  value="Atras">
-            </form>
+<!--
+-->
+</section>
 
-            <form action="index.php?ctl=modificarDatos" method="POST">
-                <input type="submit"  value="Editar">
-            </form>
-        </div>
-        </div>
-    </section>
+

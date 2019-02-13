@@ -52,16 +52,24 @@
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    margin: 15px auto 175px auto;
+    align-items: center;
+    margin: 15px auto 220px auto;
   }
 
   #formulario{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow : column wrap;
     align-content: center;
+    align-items: center;
     text-align: center;
-    margin: 15px auto 175px auto;
-  }  
+    margin-bottom: 100px;
+  }
+
+#formulario >input{
+  margin: auto auto;
+  text-align: center;
+  width: 200px;
+}
 
 #formulario label{
   margin-top: 15px;
@@ -70,16 +78,9 @@
 #formulario > #pass{
   margin-bottom: 20px;
 }
-
-  #view_perfil td{
-    border: 1px solid black;
-    text-align: center;
-    padding: 5px;
-  }
   
-  #botones_perfil{
-    display: flex;
-    justify-content: center;
+  #botonPerfil{
+    text-align: center;
   }
 
 #errorLogin {

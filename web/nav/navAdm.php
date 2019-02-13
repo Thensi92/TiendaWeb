@@ -24,11 +24,10 @@
           Productos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="index.php?ctl=verCesta">Cesta</a>
           <a class="dropdown-item" href="index.php?ctl=agregarProducto">Añadir Producto</a>
           <a class="dropdown-item" href="index.php?ctl=editarProducto">Editar Producto</a>
           <a class="dropdown-item" href="index.php?ctl=eliminarProducto">Eliminar Producto</a>
-
+        </div>
       </li>
     </ul>
 
