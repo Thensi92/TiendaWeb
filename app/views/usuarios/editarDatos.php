@@ -17,7 +17,7 @@
                 <label for="pass">Contraseña:</label>
                 <input type="password" name="contrasena" id="pass" value="<?=$_SESSION['datosUser'][4]?>">
             <br>      
-                <input type="submit" name="procesar_edicion" value="Editar Datos">
+                <input type="submit" name="procesar_edicion" value="Confirmar cambios">
             </fieldset>
         </form>
     </div>
