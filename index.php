@@ -13,7 +13,7 @@
         'verProducto' => "app/controllers/productos/verFichaProducto.php",
         'agregarProducto' => "app/views/productos/vista_insertarProductos.php",
         'editarProducto' => "app/controllers/productos/editarProducto.php",
-        'eliminarProducto' => "app/views/productos/vista_eliminarProducto.php"
+        'eliminarProducto' => "app/controllers/productos/eliminarProducto.php"
     ];
 
     $arrayPOST = [
@@ -24,7 +24,6 @@
         //PRODUCTOS
         'procesar_insertarProducto' => "app/controllers/productos/insertarProducto.php",
         'procesar_editarProducto' => "app/controllers/productos/editarProducto.php",
-        'procesar_eliminarProducto' => "app/controllers/productos/eliminarProducto.php"
     ];
 
     require_once("web/header/cabecera.php");

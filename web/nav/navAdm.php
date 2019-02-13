@@ -26,12 +26,7 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?ctl=agregarProducto">Añadir Producto</a>
       </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Productos
-        </a>
-      </li>
+      
     </ul>
 
     <form method="POST" action="<?php echo $_SERVER["PHP_SELF"] ?>" id="caja_busqueda">

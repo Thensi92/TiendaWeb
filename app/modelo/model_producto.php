@@ -64,8 +64,14 @@ Class Producto extends Modelo {
         $stmt->close();
     }
 
-    public function eliminarProducto(){
-        
+    public function eliminarProducto($id){
+        $sql = "DELETE FROM productos WHERE id = ?";
+
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bind_param('s',$id);
+
+        $stmt->execute();
+        $stmt->close();
     }
 
 
