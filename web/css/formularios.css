@@ -47,6 +47,9 @@
     width: 170px;
   }
   
+#imagenCesta{
+  width: 80px;
+}
 /** TABLAS Y FORMULARIOS USUARIO **/
   #datosUsuario{
     display: flex;

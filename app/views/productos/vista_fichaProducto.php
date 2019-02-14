@@ -26,7 +26,7 @@
         echo '</ul>';
         
         echo '<div class="card-body">';
-          echo '<a href="#" class="card-link">Añadir a la cesta</a>';
+          echo '<a href="index.php?ctl=añadirAlCarro&&id='.$datosDelProducto["id"].'" class="card-link">Añadir a la cesta</a>';
         echo '</div>';
       }
     }else{

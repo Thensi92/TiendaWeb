@@ -13,7 +13,11 @@
         'verProducto' => "app/controllers/productos/verFichaProducto.php",
         'agregarProducto' => "app/views/productos/vista_insertarProductos.php",
         'editarProducto' => "app/controllers/productos/editarProducto.php",
-        'eliminarProducto' => "app/controllers/productos/eliminarProducto.php"
+        'eliminarProducto' => "app/controllers/productos/eliminarProducto.php",
+        //CESTA
+        'añadirAlCarro' => "app/controllers/cesta/verCesta.php",
+        'verCesta' => "app/controllers/cesta/verCesta.php",
+        'eliminarProductoCesta' => "app/controllers/cesta/verCesta.php"
     ];
 
     $arrayPOST = [
