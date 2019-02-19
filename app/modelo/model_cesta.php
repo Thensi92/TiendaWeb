@@ -9,10 +9,10 @@ Class Cesta extends Producto {
     public function insertarProductoCesta($id){
         $cantidad = 1;
 
-        if(isset($_SESSION['datosUser']['cesta'][$id])){
-            $_SESSION['datosUser']['cesta'][$id]++;
+        if(isset($_SESSION['cesta'][$id])){
+            $_SESSION['cesta'][$id]++;
         }else{
-            $_SESSION['datosUser']['cesta'][$id] = $cantidad;
+            $_SESSION['cesta'][$id] = $cantidad;
         }
 
     }
@@ -20,8 +20,8 @@ Class Cesta extends Producto {
     public function getCesta(){
         $productos = [];
         
-        if(isset($_SESSION['datosUser']['cesta'])){
-            $productos = $_SESSION['datosUser']['cesta'];
+        if(isset($_SESSION['cesta'])){
+            $productos = $_SESSION['cesta'];
         }
 
         return $productos;
