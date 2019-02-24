@@ -74,6 +74,26 @@ Class Producto extends Modelo {
         $stmt->close();
     }
 
+    public function decrementarCantidadProducto($id){
+        $sql = "UPDATE productos SET cantidad = cantidad - 1 WHERE id = ?";
+        
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bind_param("s",$id);
+        
+        $stmt->execute();
+        $stmt->close();
+    }
+
+    public function incrementarCantidadProducto($id){
+        $sql = "UPDATE productos SET cantidad = cantidad + 1 WHERE id = ?";
+        
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bind_param("s",$id);
+        
+        $stmt->execute();
+        $stmt->close();
+    }
+
 
     public function cerrarConexion(){
         parent::cerrarConexion();

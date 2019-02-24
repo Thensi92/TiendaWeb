@@ -28,11 +28,18 @@ Class Cesta extends Producto {
     }
 
     public function borrarProductoCesta($id){
-
+        if(isset($_SESSION['cesta'][$id])){
+            $_SESSION['cesta'][$id]--;
+            
+            if($_SESSION['cesta'][$id] == 0){
+                unset($_SESSION['cesta'][$id]);
+            }
+        }
     }
+        
 
     public function borrarCestaCompleta(){
-
+        unset($_SESSION['cesta']);
     }
 
 

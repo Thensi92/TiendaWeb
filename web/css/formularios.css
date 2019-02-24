@@ -50,6 +50,15 @@
 #imagenCesta{
   width: 80px;
 }
+
+#cesta{
+    text-align: center;
+}
+
+.icono{
+  width: 20px;
+  margin: 10px
+}
 /** TABLAS Y FORMULARIOS USUARIO **/
   #datosUsuario{
     display: flex;
@@ -102,12 +111,12 @@
   border-radius: 10px;
   background-color: #777;
   border: 1px solid black;
-  animation-name: prueba;
+  animation-name: error;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
-@keyframes prueba{
+@keyframes error{
   from {
     margin-left: -70%; 
     opacity: 0.0;

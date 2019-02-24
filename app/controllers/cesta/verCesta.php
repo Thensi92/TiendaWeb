@@ -25,7 +25,15 @@ if(isset($_GET['ctl']) && $_GET['ctl'] == 'verCesta'){
     }
 }else if(isset($_GET['ctl']) && $_GET['ctl'] == 'añadirAlCarro'){
     $id = $_GET['id'];
+
     $cesta->insertarProductoCesta($id);
+    $cesta->decrementarCantidadProducto($id);
+    header("Location: index.php?ctl=verCesta");
+
+}else if(isset($_GET['ctl']) && $_GET['ctl'] == 'eliminarProductoCesta'){
+    $id = $_GET['id'];
+    $cesta->borrarProductoCesta($id);
+    $cesta->incrementarCantidadProducto($id);
     header("Location: index.php?ctl=verCesta");
 }
 
