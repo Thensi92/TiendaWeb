@@ -24,12 +24,13 @@ if($camposVacios){
     $pass = $_POST['contrasena'];
 
     $filasAfectadas= $conexion->registrarUsuario($nombre,$fecha,$email,$apodo,$pass);
-    $conexion->cerrarConexion();
-
+    
     if($filasAfectadas == 1){
         header("Location: index.php");
     }else{
         require_once('app/views/usuarios/errorRegistro.php');
     }
+    
+    $conexion->cerrarConexion();
 }
 ?>
