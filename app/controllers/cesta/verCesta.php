@@ -35,6 +35,11 @@ $productos = [];
         $cesta->borrarProductoCesta($id);
         header("Location: index.php?ctl=verCesta");
 
+    }else if(isset($_GET['ctl']) && $_GET['ctl'] == 'eliminarFilaProductoCesta'){
+        $id = $_GET['id'];
+        $cesta->borrarFilaProductoCesta($id);
+        header("Location: index.php?ctl=verCesta");
+
     }else if(isset($_GET['ctl']) && $_GET['ctl'] == 'confirmarCompra'){
         $productosCesta = $cesta->getCesta();
         $unidades;
@@ -55,8 +60,11 @@ $productos = [];
                 //ACTUALIZA LA BASE DE DATOS, UPDATE DE LA CANTIDAD 
                 $cesta->updateCantidadProducto($unidades,$idProducto);
             }
-            
+            //UNA VEZ ACTUALIZADA LA BASE Y CONFIRMADA LA COMPRA VACIA LA CESTA
             unset($_SESSION['cesta']);
+
+            // Y GENERA EL DOCUMENTO PDF
+            //$cesta->generarPDF();
         }
     }
 

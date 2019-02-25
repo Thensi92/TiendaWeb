@@ -18,6 +18,7 @@
         'añadirAlCarro' => "app/controllers/cesta/verCesta.php",
         'verCesta' => "app/controllers/cesta/verCesta.php",
         'eliminarProductoCesta' => "app/controllers/cesta/verCesta.php",
+        'eliminarFilaProductoCesta' => "app/controllers/cesta/verCesta.php",
         'confirmarCompra' => "app/controllers/cesta/verCesta.php"
     ];
 

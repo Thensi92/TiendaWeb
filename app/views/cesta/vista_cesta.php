@@ -7,11 +7,10 @@
   <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Imagen</th>
         <th scope="col">Titulo</th>
         <th scope="col">Cantidad</th>
         <th scope="col">Precio</th>
-        <th scope="col"></th>
+        <th scope="col">Opciones</th>
       </tr>
     </thead>
     
@@ -21,13 +20,14 @@
       foreach($productos as $producto){
       ?>
         <tr>
-          <th scope="row"><a href="index.php?ctl=verProducto&id=<?=$producto['id']?>"><img id="imagenCesta" src="<?=$producto['rutaImagen']?>" alt="Ver Producto"></a></th>
           <td><?=$producto['titulo']?></td>
           <td><?=$producto['cantidad']?></td>
           <td class="totalProducto"><?=$producto['totalProducto']?> €</td>
-          <td>
-            <a href="index.php?ctl=eliminarProductoCesta&id=<?=$producto['id']?>&unidad=<?=$producto['cantidad']?>"><img class="icono" src="web/icons/minun.ico"></a>
-            <a href="index.php?ctl=añadirAlCarro&id=<?=$producto['id']?>&unidad=<?=$producto['cantidad']?>"><img class="icono" src="web/img/plus.jpg"></a>
+          <td class="menuOptions">
+            <a href="index.php?ctl=eliminarProductoCesta&id=<?=$producto['id']?>"><img class="icono" src="web/icons/minun.ico"></a>
+            <a href="index.php?ctl=añadirAlCarro&id=<?=$producto['id']?>"><img class="icono" src="web/img/plus.jpg"></a>
+            <a href="index.php?ctl=eliminarFilaProductoCesta&id=<?=$producto['id']?>"><img class="icono" src="web/img/delete.png"></a>
+            <a href="index.php?ctl=verProducto&id=<?=$producto['id']?>"><img class="icono" src="web/img/producto.png">
           </td>
         </tr>
       <?php
@@ -37,13 +37,8 @@
 
     <tbody>
       <tr>
-        <th scope="row">TOTAL:</th>
-        <td id="total"></td>
-        <td colspan="2">
-            <a href="index.php?ctl=generarDocumentoPDF">
-                <img class="icono" src="web/img/pdf.png">
-            </a>
-        </td>
+        <th class="fondoCelda posicionCeldaDer" colspan="2" scope="row">TOTAL:</th>
+        <td class="fondoCelda posicionCeldaIzq" colspan="3" id="total"></td>
       </tr>
     </tbody>
   </table>

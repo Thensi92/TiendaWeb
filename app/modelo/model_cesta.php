@@ -36,6 +36,12 @@ Class Cesta extends Producto {
             }
         }
     }
+
+    public function borrarFilaProductoCesta($id){
+        if(isset($_SESSION['cesta'][$id])){
+            unset($_SESSION['cesta'][$id]);
+        }
+    }
         
 
     public function borrarCestaCompleta(){
