@@ -57,15 +57,66 @@ $productos = [];
                 
                 $productos[$id]['totalProducto'] = $cantidad * $productos[$id]['precioProducto']; 
                 
-                //ACTUALIZA LA BASE DE DATOS, UPDATE DE LA CANTIDAD 
                 $cesta->updateCantidadProducto($unidades,$idProducto);
             }
-            //UNA VEZ ACTUALIZADA LA BASE Y CONFIRMADA LA COMPRA VACIA LA CESTA
             unset($_SESSION['cesta']);
-
-            // Y GENERA EL DOCUMENTO PDF
-            //$cesta->generarPDF();
+            generarPDF();
         }
+    }
+
+    function generarPDF(){
+        global $productos;
+        global $cesta;
+        $preciosProductos = 0;
+
+        ob_start();
+        require('web/fpdf/fpdf.php');
+        $pdf = new FPDF();
+        $pdf->AddPage();
+        
+        //HEADER
+        $pdf->SetAuthor("Thensi",true);
+        $pdf->SetFont('Courier','B', 14);
+        $pdf->Cell(120,10,'FACTURA', 0, 0, 'L');
+        $pdf->SetFont('Courier','B', 10);
+        $pdf->Cell(60,10,'Fecha: '.date('l jS F Y'), 0, 0,'C');
+        $pdf->Ln();$pdf->Ln();
+
+        //DATOS USER
+        $pdf->Cell(60,5,'Datos del cliente:');
+        $pdf->Ln();
+
+        $pdf->SetFont('Courier','B', 10);
+        $pdf->Cell(10,5, "");
+        $pdf->Cell(60,5,'* Nombre: '.$_SESSION['datosUser'][0]);
+        $pdf->Ln();
+        $pdf->Cell(10,5, "");
+        $pdf->Cell(60,5,"* Correo: ".$_SESSION['datosUser'][2]);
+        $pdf->Ln();
+        $pdf->Ln();
+
+        //TABLA
+        $pdf->SetFont('Courier','B', 12);
+        $pdf->Cell(90,8,"Producto", 1, 0,'C');
+        $pdf->Cell(30,8,"Cantidad", 1, 0,'C');
+        $pdf->Cell(30,8,"Precio", 1, 0,'C');
+        $pdf->Ln();
+        $pdf->SetFont('Courier','B', 8);
+
+        foreach($productos as $producto){
+            $pdf->Cell(90,7,$producto['titulo'], 1, 0,'C');
+            $pdf->Cell(30,7,$producto['cantidad'], 1, 0,'C');
+            $pdf->Cell(30,7,$producto['totalProducto']." EUR", 1, 0,'C');
+            $pdf->Ln();
+            $preciosProductos += $producto['totalProducto'];
+        }
+
+        $pdf->Ln();
+        $pdf->SetFont('Courier','B', 12);
+        $pdf->Cell(60,8,"Total: ".$preciosProductos." EUR", 1, 0,'C');
+
+        $pdf->Output();
+        ob_end_flush();
     }
 
 require_once('app/views/cesta/vista_cesta.php');

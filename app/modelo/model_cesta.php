@@ -47,8 +47,6 @@ Class Cesta extends Producto {
     public function borrarCestaCompleta(){
         unset($_SESSION['cesta']);
     }
-
-
 }
 
 ?>

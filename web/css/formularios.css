@@ -142,10 +142,6 @@
   text-align: right;
 }
 
-.posicionCeldaIzq{
-  text-align: left;
-}
-
 .menuOptions{
   display: flex;
   align-items: center;

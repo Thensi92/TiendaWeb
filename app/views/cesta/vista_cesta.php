@@ -50,7 +50,7 @@
     require_once("app/views/cesta/cestaVacia.php");
   }
   
-  if(!empty($productos) && $productos[$id]['cantidad'] > 0){
+  if(!empty($productos)){
     echo '<div id="botonConfirmacion">';
       echo '<a href="index.php?ctl=confirmarCompra"><button class= "btn btn-dark">Confirmar Compra</button></a>';
     echo '</div>';
